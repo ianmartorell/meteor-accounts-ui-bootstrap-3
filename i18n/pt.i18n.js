@@ -1,4 +1,4 @@
-i18n.map("pt-BR", {
+i18n.map("pt", {
 	resetPasswordDialog: {
 		title: "Esqueceu sua senha?",
 		newPassword: "Nova senha",
@@ -55,7 +55,7 @@ i18n.map("pt-BR", {
 		signOut: "Sair"
 	},
 	loginButtonsLoggedOut: {
-		noLoginServices: "Nenhum servico de login configurado"
+		noLoginServices: "Nenhum serviço de login configurado"
 	},
 	loginFields: {
 		usernameOrEmail: "Usuário ou E-mail",
@@ -68,12 +68,12 @@ i18n.map("pt-BR", {
 		email: "E-mail",
 		emailOpt: "E-mail (opcional)",
 		password: "Senha",
-		passwordAgain: "Senha (confirmacão)"
+		passwordAgain: "Senha (confirmação)"
 	},
 	changePasswordFields: {
-		currentPassword: "Senah atual",
+		currentPassword: "Senha atual",
 		newPassword: "Nova Senha",
-		newPasswordAgain: "Nova Senha (confirmacao)"
+		newPasswordAgain: "Nova Senha (confirmação)"
 	},
 	errorMessages: {
 		usernameTooShort: "Usuário precisa ter mais de 3 caracteres",
