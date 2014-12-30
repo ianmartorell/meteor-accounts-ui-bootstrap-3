@@ -1,4 +1,4 @@
-accountsUIBootstrap3.map("ko", {
+i18n.map("ko", {	
 	resetPasswordDialog: {
 		title: "비밀번호 초기화하기",
 		newPassword: "새로운 비밀번호",
