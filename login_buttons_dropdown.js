@@ -41,6 +41,10 @@
 	});
 
 	Template._loginButtonsLoggedInDropdown.helpers({
+		userIconClasses: function() {
+			return accountsUIBootstrap3.userIconClasses;
+		},
+
 		displayName: function() {
 			return Accounts._loginButtons.displayName();
 		},
@@ -175,6 +179,9 @@
 
 
 	Template._loginButtonsLoggedOutDropdown.helpers({
+		signInIconClasses: function() {
+			return accountsUIBootstrap3.signInIconClasses;
+		},
 		// additional classes that can be helpful in styling the dropdown
 		additionalClasses: function() {
 			if (!Accounts.password) {
@@ -453,7 +460,7 @@
 					loginButtonsSession.errorMessage(i18n('errorMessages.userNotFound'))
 				else if (error.reason == 'Incorrect password')
 					loginButtonsSession.errorMessage(i18n('errorMessages.incorrectPassword'))
-				else 
+				else
 					loginButtonsSession.errorMessage(error.reason || "Unknown error");
 			} else {
 				loginButtonsSession.closeDropdown();
@@ -533,7 +540,7 @@
 			if (error) {
 				if (error.reason == 'Signups forbidden')
 					loginButtonsSession.errorMessage(i18n('errorMessages.signupsForbidden'))
-				else 
+				else
 					loginButtonsSession.errorMessage(error.reason || "Unknown error");
 			} else {
 				loginButtonsSession.closeDropdown();
@@ -552,7 +559,7 @@
 				if (error) {
 					if (error.reason == 'User not found')
 						loginButtonsSession.errorMessage(i18n('errorMessages.userNotFound'))
-					else 
+					else
 						loginButtonsSession.errorMessage(error.reason || "Unknown error");
 				} else
 					loginButtonsSession.infoMessage(i18n('infoMessages.emailSent'));
@@ -568,7 +575,7 @@
 		var oldPassword = elementValueById('login-old-password');
 		// notably not trimmed. a password could (?) start or end with a space
 		var password = elementValueById('login-password');
-		
+
 		if (password == oldPassword) {
 			loginButtonsSession.errorMessage(i18n('errorMessages.newPasswordSameAsOld'));
 			return;
@@ -584,7 +591,7 @@
 			if (error) {
 				if (error.reason == 'Incorrect password')
 					loginButtonsSession.errorMessage(i18n('errorMessages.incorrectPassword'))
-				else 
+				else
 					loginButtonsSession.errorMessage(error.reason || "Unknown error");
 			} else {
 				loginButtonsSession.infoMessage(i18n('infoMessages.passwordChanged'));
