@@ -24,7 +24,7 @@ i18n.map("es", {
 	},
 	loginButtonsLoggedOutDropdown: {
 		signIn: "Iniciar sesión",
-		up: "registrarse"
+		up: "Registrarse"
 	},
 	loginButtonsLoggedOutPasswordServiceSeparator: {
 		or: "o"
