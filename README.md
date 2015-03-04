@@ -120,11 +120,19 @@ accountsUIBootstrap3.setCustomSignupOptions = function() {
 
 ### Disable User Account Creation
 
-You can prevent users from creating new accounts by setting the `forbidClientAccountCreation` flag in `Accounts.ui.config` as shown below. This will also prevent the "Sign Up" buttons from being rendered.
+If you would like to prevent users from creating new accounts, you can choose to not show the account creation buttons as shown below.
 
 ```javascript
 Accounts.ui.config({
     forbidClientAccountCreation : true
+});
+```
+
+While this flag prevents the user from seeing the "Create Account" link, the server will still accept new accounts. You can prevent new account creation altogether by always returning false in the [account validation stage](http://docs.meteor.com/#/full/accounts_validatenewuser) on the server. Here is an example (place in server-side code):
+
+```javascript
+Accounts.validateNewUser(function (user){
+    return false;
 });
 ```
 
