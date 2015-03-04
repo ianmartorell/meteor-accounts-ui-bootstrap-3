@@ -42,7 +42,7 @@
 <!--            -->
 <template name="_loginButtonsLoggedOutDropdown">
 	<li id="login-dropdown-list" class="dropdown">
-		<a class="dropdown-toggle">{{i18n 'loginButtonsLoggedOutDropdown.signIn'}}{{#unless forbidClientAccountCreation}} {{#unless forbidClientAccountCreation}}/ {{i18n 'loginButtonsLoggedOutDropdown.up'}}{{/unless}}{{/unless}} <b class="caret"></b></a>
+		<a class="dropdown-toggle">{{i18n 'loginButtonsLoggedOutDropdown.signIn'}}{{#unless forbidClientAccountCreation}} / {{i18n 'loginButtonsLoggedOutDropdown.up'}}{{/unless}} <b class="caret"></b></a>
 		<div class="dropdown-menu">
 			{{> _loginButtonsLoggedOutAllServices}}
 		</div>
