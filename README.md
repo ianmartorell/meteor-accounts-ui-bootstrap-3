@@ -128,14 +128,6 @@ Accounts.ui.config({
 });
 ```
 
-While this flag prevents the user from seeing the "Create Account" link, the server will still accept new accounts. You can prevent new account creation altogether by always returning false in the [account validation stage](http://docs.meteor.com/#/full/accounts_validatenewuser) on the server. Here is an example (place in server-side code):
-
-```javascript
-Accounts.validateNewUser(function (user){
-    return false;
-});
-```
-
 ### Logout callback
 
 If the function `accountsUIBootstrap3.logoutCallback` exists, it will be called as the callback of Meteor.logout. For example:
