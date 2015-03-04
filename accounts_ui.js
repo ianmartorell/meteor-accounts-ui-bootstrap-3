@@ -8,7 +8,7 @@ if (!Accounts.ui._options) {
 		requestPermissions: {},
 		requestOfflineToken: {},
 		forceApprovalPrompt: {},
-		forbidClientAccountCreation: new ReactiveVar(false)
+		forbidClientAccountCreation: false
 	};
 }
 
@@ -32,7 +32,7 @@ Accounts.ui.config = function(options) {
 	
 	// deal with `forbidClientAccountCreation`
 	if (options.forbidClientAccountCreation) {
-		Accounts.ui._options.forbidClientAccountCreation.set(options.forbidClientAccountCreation);
+		Accounts.ui._options.forbidClientAccountCreation = options.forbidClientAccountCreation;
 	}
 	
 	// deal with `passwordSignupFields`

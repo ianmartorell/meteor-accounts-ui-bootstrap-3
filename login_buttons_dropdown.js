@@ -209,7 +209,7 @@
 		},
 
 		forbidClientAccountCreation: function() {
-			return Accounts.ui._options.forbidClientAccountCreation.get();
+			return Accounts.ui._options.forbidClientAccountCreation;
 		}
 	});
 
@@ -333,7 +333,7 @@
 		},
 
 		showCreateAccountLink: function() {
-			return !Accounts.ui._options.forbidClientAccountCreation.get();
+			return !Accounts.ui._options.forbidClientAccountCreation;
 		}
 	});
 
