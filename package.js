@@ -12,7 +12,8 @@ Package.on_use(function (api) {
 		'accounts-base@1.0.0',
 		'underscore@1.0.0',
 		'templating@1.0.0',
-		'anti:i18n@0.4.3'
+		'anti:i18n@0.4.3',
+		'reactive-var@1.0.4'
 		],'client')
 
 	api.imply('accounts-base', ['client', 'server']);

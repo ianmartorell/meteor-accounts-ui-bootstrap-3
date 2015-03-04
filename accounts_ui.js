@@ -7,7 +7,8 @@ if (!Accounts.ui._options) {
 		extraSignupFields: [],
 		requestPermissions: {},
 		requestOfflineToken: {},
-		forceApprovalPrompt: {}
+		forceApprovalPrompt: {},
+		forbidClientAccountCreation: new ReactiveVar(false)
 	};
 }
 
@@ -20,7 +21,7 @@ Accounts.ui.navigate = function (route, hash) {
 
 Accounts.ui.config = function(options) {
 	// validate options keys
-	var VALID_KEYS = ['passwordSignupFields', 'requestPermissions', 'extraSignupFields', 'requestOfflineToken', 'forceApprovalPrompt'];
+	var VALID_KEYS = ['passwordSignupFields', 'requestPermissions', 'extraSignupFields', 'requestOfflineToken', 'forceApprovalPrompt', 'forbidClientAccountCreation'];
 	_.each(_.keys(options), function(key) {
 		if (!_.contains(VALID_KEYS, key)){
 			throw new Error("Accounts.ui.config: Invalid key: " + key);
@@ -28,6 +29,12 @@ Accounts.ui.config = function(options) {
 	});
 	
 	options.extraSignupFields = options.extraSignupFields || [];
+	
+	// deal with `forbidClientAccountCreation`
+	if (options.forbidClientAccountCreation) {
+		Accounts.ui._options.forbidClientAccountCreation.set(options.forbidClientAccountCreation);
+	}
+	
 	// deal with `passwordSignupFields`
 	if (options.passwordSignupFields) {
 		if (_.contains([
