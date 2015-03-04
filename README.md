@@ -118,14 +118,24 @@ accountsUIBootstrap3.setCustomSignupOptions = function() {
 }
 ```
 
+### Disable User Account Creation
+
+You can prevent users from creating new accounts by setting the `forbidClientAccountCreation` flag in `Accounts.ui.config` as shown below. This will also prevent the "Sign Up" buttons from being rendered.
+
+```javascript
+Accounts.ui.config({
+    forbidClientAccountCreation : true
+});
+```
+
 ### Logout callback
 
 If the function `accountsUIBootstrap3.logoutCallback` exists, it will be called as the callback of Meteor.logout. For example:
 
 ```javascript
 accountsUIBootstrap3.logoutCallback = function(error) {
-  if(error) console.log("Error:" + error);
-  Router.go('home');
+    if(error) console.log("Error:" + error);
+    Router.go('home');
 }
 ```
 
@@ -152,14 +162,14 @@ If you want to implement your own language, use the `map` function like so:
 ```javascript
 accountsUIBootstrap3.map('es', {
     _resetPasswordDialog: {
-      title: 'Restablece tu contraseña',
-      cancel: 'Cancelar',
-      submit: 'Guardar'
+        title: 'Restablece tu contraseña',
+        cancel: 'Cancelar',
+        submit: 'Guardar'
     },
     _enrollAccountDialog: {
-      title: 'Escribe una contraseña',
-      cancel: 'Cerrar',
-      submit: 'Guardar contraseña'
+        title: 'Escribe una contraseña',
+        cancel: 'Cerrar',
+        submit: 'Guardar contraseña'
     },
     // ...
 })
@@ -173,4 +183,3 @@ Screenshots
 ![Sign In](http://i.imgur.com/SGLZkOE.png)
 ![Sign Up](http://i.imgur.com/7S3C18J.png)
 ![Configure Login Service](http://i.imgur.com/Noa7sSm.png)
-
