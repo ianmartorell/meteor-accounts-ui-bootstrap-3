@@ -41,7 +41,7 @@
 <!--            -->
 <template name="_loginButtonsLoggedOutDropdown">
 	<li id="login-dropdown-list" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown">{{i18n 'loginButtonsLoggedOutDropdown.signIn'}}{{#unless forbidClientAccountCreation}} / {{i18n 'loginButtonsLoggedOutDropdown.up'}}{{/unless}} <b class="caret"></b></a>
+		<a class="dropdown-toggle" data-toggle="dropdown">{{i18n 'loginButtonsLoggedOutDropdown.signIn'}}{{#unless forbidClientAccountCreation}} {{i18n 'loginButtonsLoggedOutDropdownSeparator.or'}}{{/unless}} {{i18n 'loginButtonsLoggedOutDropdown.up'}}{{/unless}} <b class="caret"></b></a>
 		<div class="dropdown-menu">
 			{{> _loginButtonsLoggedOutAllServices}}
 		</div>
@@ -168,4 +168,3 @@
 	<button class="btn btn-block btn-primary" id="login-buttons-do-change-password">{{i18n 'loginButtonsChangePassword.submit'}}</button>
 	<button class="btn btn-block btn-default" id="login-buttons-cancel-change-password">{{i18n 'loginButtonsChangePassword.cancel'}}</button>
 </template>
-

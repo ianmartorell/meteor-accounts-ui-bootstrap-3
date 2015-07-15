@@ -24,6 +24,9 @@ i18n.map("en", {
 		password: "Change password",
 		signOut: "Sign out"
 	},
+	loginButtonsLoggedOutDropdownSeparator: {
+		or: "/"
+	},
 	loginButtonsLoggedOutDropdown: {
 		signIn: "Sign in",
 		up: "Join"
