@@ -25,11 +25,11 @@ i18n.map("en", {
 		signOut: "Sign out"
 	},
 	loginButtonsLoggedOutDropdownSeparator: {
-		or: "/"
+		or: "" // "/"
 	},
 	loginButtonsLoggedOutDropdown: {
 		signIn: "Sign in",
-		up: "Join"
+		up: "" // "Joing"
 	},
 	loginButtonsLoggedOutPasswordServiceSeparator: {
 		or: "or"
@@ -38,7 +38,7 @@ i18n.map("en", {
 		create: "Create",
 		signIn: "Sign in",
 		forgot: "Forgot password?",
-		createAcc: "Create account"
+		createAcc: "" // "Create account"
 	},
 	forgotPasswordForm: {
 		email: "Email",
