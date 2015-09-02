@@ -41,17 +41,17 @@
 		displayName: function() {
 			return Accounts._loginButtons.displayName();
 		},
-
 		inChangePasswordFlow: function() {
 			return loginButtonsSession.get('inChangePasswordFlow');
 		},
-
 		inMessageOnlyFlow: function() {
 			return loginButtonsSession.get('inMessageOnlyFlow');
 		},
-
 		dropdownVisible: function() {
 			return loginButtonsSession.get('dropdownVisible');
+		},
+		user_profile_picture: function(){
+			return ProfileImages.findOne(Meteor.user().profile.imageId).url();
 		}
 	});
 
@@ -64,7 +64,7 @@
 			//
 			// instead we use the heuristic: if the user has a username or email set.
 			var user = Meteor.user();
-			return user.username || (user.emails && user.emails[0] && user.emails[0].address);
+			return user.username || user.profile.firstName || (user.emails && user.emails[0] && user.emails[0].address);
 		},
 		additionalLoggedInDropdownActions: function() {
 			return Template._loginButtonsAdditionalLoggedInDropdownActions !== undefined;

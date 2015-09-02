@@ -88,7 +88,9 @@
 		if (!user){
 			return '';
 		}
-
+		if (user.profile && user.profile.firstName){
+			return user.profile.firstName;
+		}
 		if (user.profile && user.profile.name){
 			return user.profile.name;
 		}
@@ -175,4 +177,3 @@
 	};
 
 })();
-
