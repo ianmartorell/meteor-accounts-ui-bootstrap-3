@@ -50,6 +50,12 @@
 		dropdownVisible: function() {
 			return loginButtonsSession.get('dropdownVisible');
 		},
+		hasImage: function(){
+			if (Meteor.user().profile.imageId){
+				return "hasImage";
+			}
+			return "";
+		},
 		user_profile_picture: function(){
 			if (Meteor.user().profile.imageId){
 				return ProfileImages.findOne(Meteor.user().profile.imageId).url();
@@ -66,7 +72,7 @@
 			//
 			// instead we use the heuristic: if the user has a username or email set.
 			var user = Meteor.user();
-			return user.username || user.profile.firstName || (user.emails && user.emails[0] && user.emails[0].address);
+			return user.username || user.profile.firstName || user.emailAddress();
 		},
 		additionalLoggedInDropdownActions: function() {
 			return Template._loginButtonsAdditionalLoggedInDropdownActions !== undefined;
