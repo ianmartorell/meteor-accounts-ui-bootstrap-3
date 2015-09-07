@@ -51,7 +51,9 @@
 			return loginButtonsSession.get('dropdownVisible');
 		},
 		user_profile_picture: function(){
-			return ProfileImages.findOne(Meteor.user().profile.imageId).url();
+			if (Meteor.user().profile.imageId){
+				return ProfileImages.findOne(Meteor.user().profile.imageId).url();
+			}
 		}
 	});
 
