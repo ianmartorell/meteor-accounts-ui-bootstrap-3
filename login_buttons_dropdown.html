@@ -3,7 +3,7 @@
 <!--           -->
 <template name="_loginButtonsLoggedInDropdown">
 	<li id="login-dropdown-list" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown">
+		<a class="dropdown-toggle {{hasImage}}" data-toggle="dropdown">
 			{{displayName}}
 			{{#with user_profile_picture}}
 				<img src="{{this}}" class="img" alt="#" />
