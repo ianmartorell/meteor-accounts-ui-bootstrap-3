@@ -14,82 +14,82 @@ i18n.map("ro", {
 		submit: "Salveaza"
 	},
 	justVerifiedEmailDialog: {
-		verified: "Email address verified",
-		dismiss: "Dismiss"
+		verified: "Adresa de email a fost verificata",
+		dismiss: "Inchide"
 	},
 	loginButtonsMessagesDialog: {
-		dismiss: "Dismiss",
+		dismiss: "Inchide",
 	},
 	loginButtonsLoggedInDropdownActions: {
-		password: "Change password",
+		password: "Schimba parola",
 		signOut: "Sign out"
 	},
 	loginButtonsLoggedOutDropdown: {
-		signIn: "Sign in",
-		up: "Join"
+		signIn: "Logheaza-te",
+		up: "Devino membru"
 	},
 	loginButtonsLoggedOutPasswordServiceSeparator: {
-		or: "or"
+		or: "sau"
 	},
 	loginButtonsLoggedOutPasswordService: {
-		create: "Create",
-		signIn: "Sign in",
-		forgot: "Forgot password?",
-		createAcc: "Create account"
+		create: "Creaza",
+		signIn: "Inregistreaza-te",
+		forgot: "Ai uitat parola?",
+		createAcc: "Creeaza cont"
 	},
 	forgotPasswordForm: {
 		email: "Email",
-		reset: "Reset password",
-		invalidEmail: "Invalid email"
+		reset: "Reseteaza parola",
+		invalidEmail: "Adresa de email invalida"
 	},
 	loginButtonsBackToLoginLink: {
-		back: "Cancel"
+		back: "Anuleaza"
 	},
 	loginButtonsChangePassword: {
-		submit: "Change password",
-		cancel: "Cancel"
+		submit: "Schimba parola",
+		cancel: "Anuleaza"
 	},
 	loginButtonsLoggedOutSingleLoginButton: {
-		signInWith: "Sign in with",
-		configure: "Configure",
+		signInWith: "Inregistreaza-te cu",
+		configure: "Configureaza",
 	},
 	loginButtonsLoggedInSingleLogoutButton: {
 		signOut: "Sign out"
 	},
 	loginButtonsLoggedOut: {
-		noLoginServices: "No login services configured"
+		noLoginServices: "Niciun serviciu de logare nu a fost configurat"
 	},
 	loginFields: {
-		usernameOrEmail: "Username or Email",
-		username: "Username",
+		usernameOrEmail: "Utilizator sau Email",
+		username: "Utilizator",
 		email: "Email",
-		password: "Password"
+		password: "Parola"
 	},
 	signupFields: {
-		username: "Username",
+		username: "Utilizator",
 		email: "Email",
 		emailOpt: "Email (optional)",
-		password: "Password",
-		passwordAgain: "Password (again)"
+		password: "Parola",
+		passwordAgain: "Parola (din nou)"
 	},
 	changePasswordFields: {
-		currentPassword: "Current Password",
-		newPassword: "New Password",
-		newPasswordAgain: "New Password (again)"
+		currentPassword: "Parola curenta",
+		newPassword: "Parola noua",
+		newPasswordAgain: "Parola noua (din nou)"
 	},
 	infoMessages : {
-		emailSent: "Email sent",
-		passwordChanged: "Password changed"
+		emailSent: "Email trimis",
+		passwordChanged: "Parola schimbata"
 	},
 	errorMessages: {
-		genericTitle: "There was an error",
-		userNotFound: "User not found",
-		invalidEmail: "Invalid email",
-		incorrectPassword: "Incorrect password",
-		usernameTooShort: "Username must be at least 3 characters long",
-		passwordTooShort: "Password must be at least 6 characters long",
-		passwordsDontMatch: "Passwords don't match",
-		newPasswordSameAsOld: "New and old passwords must be different",
-		signupsForbidden: "Signups forbidden"
+		genericTitle: "A fost o eroare",
+		userNotFound: "Utilizatorul nu a fost gasit",
+		invalidEmail: "Email invalid",
+		incorrectPassword: "Parola incorecta",
+		usernameTooShort: "Utilizatorul trebuie sa aiba minimum 3 caractere",
+		passwordTooShort: "Parola trebuie sa aiba minimum 6 caractere",
+		passwordsDontMatch: "Parolele nu se potrivesc",
+		newPasswordSameAsOld: "Noua parola trebuie sa fie deosibita de cea veche",
+		signupsForbidden: "Logare nepermisa"
 	}
 });
