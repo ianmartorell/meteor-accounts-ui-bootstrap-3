@@ -11,4 +11,3 @@ accountsUIBootstrap3 = {
 		return i18n.map(lang, obj)
 	}
 }
-
