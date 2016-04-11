@@ -15,10 +15,10 @@ i18n.map("pl", {
 	},
 	justVerifiedEmailDialog: {
 		verified: "Adres email został zweryfikowany",
-		dismiss: "Odrzuć"
+		dismiss: "Zamknij"
 	},
 	loginButtonsMessagesDialog: {
-		dismiss: "Odrzuć"
+		dismiss: "Zamknij"
 	},
 	loginButtonsLoggedInDropdownActions: {
 		password: "Zmień hasło",
