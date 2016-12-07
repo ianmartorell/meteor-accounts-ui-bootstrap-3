@@ -197,7 +197,7 @@
 
 	Template._loginButtonsLoggedOutDropdown.helpers({
 		forbidClientAccountCreation: function() {
-			return Accounts._options.forbidClientAccountCreation;
+			return Accounts.ui._options.forbidClientAccountCreation;
 		}
 	});
 
@@ -340,7 +340,7 @@
 		},
 
 		showCreateAccountLink: function() {
-			return !Accounts._options.forbidClientAccountCreation;
+			return !Accounts.ui._options.forbidClientAccountCreation;
 		}
 	});
 
