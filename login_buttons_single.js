@@ -29,6 +29,8 @@
 				options.requestOfflineToken = Accounts.ui._options.requestOfflineToken[serviceName];
 			if (Accounts.ui._options.forceApprovalPrompt[serviceName])
 				options.forceApprovalPrompt = Accounts.ui._options.forceApprovalPrompt[serviceName];
+			if (Accounts.ui._options.loginStyle[serviceName])
+				options.loginStyle = Accounts.ui._options.loginStyle[serviceName];
 
 			loginWithService(options, callback);
 		}
@@ -57,4 +59,3 @@
 		return str.charAt(0).toUpperCase() + str.slice(1);
 	};
 })();
-

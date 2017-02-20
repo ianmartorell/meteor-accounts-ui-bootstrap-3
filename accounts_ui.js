@@ -8,6 +8,7 @@ if (!Accounts.ui._options) {
 		requestPermissions: {},
 		requestOfflineToken: {},
 		forceApprovalPrompt: {},
+		loginStyle: {},
 		forceEmailLowercase: false,
 		forceUsernameLowercase: false,
 		forcePasswordLowercase: false
@@ -24,7 +25,7 @@ Accounts.ui.navigate = function (route, hash) {
 Accounts.ui.config = function(options) {
 	// validate options keys
 	var VALID_KEYS = ['onCreate', 'passwordSignupFields', 'extraSignupFields', 'forceEmailLowercase', 'forceUsernameLowercase','forcePasswordLowercase',
-	'requestPermissions', 'requestOfflineToken', 'forceApprovalPrompt'];
+	'requestPermissions', 'requestOfflineToken', 'forceApprovalPrompt', 'loginStyle'];
 
 	_.each(_.keys(options), function(key) {
 		if (!_.contains(VALID_KEYS, key)){
@@ -65,6 +66,7 @@ Accounts.ui.config = function(options) {
 	Accounts.ui._options.forceEmailLowercase = options.forceEmailLowercase;
 	Accounts.ui._options.forceUsernameLowercase = options.forceUsernameLowercase;
 	Accounts.ui._options.forcePasswordLowercase = options.forcePasswordLowercase;
+	Accounts.ui._options.loginStyle = options.loginStyle;
 
 	// deal with `requestPermissions`
 	if (options.requestPermissions) {
@@ -126,4 +128,3 @@ Accounts.ui.config = function(options) {
 Accounts.ui._passwordSignupFields = function() {
 	return Accounts.ui._options.passwordSignupFields || "EMAIL_ONLY";
 };
-
