@@ -128,14 +128,14 @@
 
 				// update new fields with appropriate defaults
 				if (username !== null) {
-					document.getElementById('login-username').value = username;
+					Template.instance().find('#login-username').value = username;
 				} else if (email !== null) {
-					document.getElementById('login-email').value = email;
+					Template.instance().find('#login-email').value = email;
 				} else if (usernameOrEmail !== null) {
 					if (usernameOrEmail.indexOf('@') === -1) {
-						document.getElementById('login-username').value = usernameOrEmail;
+						Template.instance().find('#login-username').value = usernameOrEmail;
 					} else {
-						document.getElementById('login-email').value = usernameOrEmail;
+						Template.instance().find('#login-email').value = usernameOrEmail;
 					}
 				}
 			}
@@ -157,10 +157,10 @@
 
 			// update new fields with appropriate defaults
 			if (email !== null){
-				document.getElementById('forgot-password-email').value = email;
+				Template.instance().find('#forgot-password-email').value = email;
 			} else if (usernameOrEmail !== null){
 				if (usernameOrEmail.indexOf('@') !== -1){
-					document.getElementById('forgot-password-email').value = usernameOrEmail;
+					Template.instance().find('#forgot-password-email').value = usernameOrEmail;
 				}
 			}
 		},
@@ -177,15 +177,15 @@
 			// force the ui to update so that we have the approprate fields to fill in
 			Meteor.flush();
 
-			if (document.getElementById('login-username')){
-				document.getElementById('login-username').value = username;
+			if (Template.instance().find('#login-username')){
+				Template.instance().find('#login-username').value = username;
 			}
-			if (document.getElementById('login-email')){
-				document.getElementById('login-email').value = email;
+			if (Template.instance().find('#login-email')){
+				Template.instance().find('#login-email').value = email;
 			}
 			// "login-password" is preserved thanks to the preserve-inputs package
-			if (document.getElementById('login-username-or-email')){
-				document.getElementById('login-username-or-email').value = email || username;
+			if (Template.instance().find('#login-username-or-email')){
+				Template.instance().find('#login-username-or-email').value = email || username;
 			}
 		},
 		'keypress #login-username, keypress #login-email, keypress #login-username-or-email, keypress #login-password, keypress #login-password-again': function(event) {
@@ -414,7 +414,7 @@
 	//
 
 	var elementValueById = function(id) {
-		var element = document.getElementById(id);
+		var element = Template.instance().find('#' + id);
 		if (!element){
 			return null;
 		} else {
@@ -425,7 +425,7 @@
 	var elementValueByIdForRadio = function(fieldIdPrefix, radioOptions) {
 		var value = null;
 		for (i in radioOptions) {
-			var element = document.getElementById(fieldIdPrefix + '-' + radioOptions[i].id);
+			var element = Template.instance().find('#' + fieldIdPrefix + '-' + radioOptions[i].id);
 			if (element && element.checked){
 				value =  element.value;
 			}
@@ -434,12 +434,12 @@
 	};
 
 	var elementValueByIdForCheckbox = function(id) {
-		var element = document.getElementById(id);
+		var element = Template.instance().find('#' + id);
 		return element.checked;
 	};
 
 	var trimmedElementValueById = function(id) {
-		var element = document.getElementById(id);
+		var element = Template.instance().find('#' + id);
 		if (!element){
 			return null;
 		} else {
