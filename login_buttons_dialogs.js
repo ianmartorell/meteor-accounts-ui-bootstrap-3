@@ -61,8 +61,8 @@
 
 	var resetPassword = function() {
 		loginButtonsSession.resetMessages();
-		var newPassword = document.getElementById('reset-password-new-password').value;
-		var passwordAgain= document.getElementById('reset-password-new-password-again').value;
+		var newPassword = Template.instance().find('#reset-password-new-password').value;
+		var passwordAgain= Template.instance().find('#reset-password-new-password-again').value;
 		if (!Accounts._loginButtons.validatePassword(newPassword,passwordAgain)){
 			return;
 		}
@@ -119,8 +119,8 @@
 
 	var enrollAccount = function() {
 		loginButtonsSession.resetMessages();
-		var password = document.getElementById('enroll-account-password').value;
-		var passwordAgain= document.getElementById('enroll-account-password-again').value;
+		var password = Template.instance().find('#enroll-account-password').value;
+		var passwordAgain= Template.instance().find('#enroll-account-password-again').value;
 		if (!Accounts._loginButtons.validatePassword(password,passwordAgain)){
 			return;
 		}
@@ -230,7 +230,7 @@
 					service: serviceName
 				};
 				_.each(configurationFields(), function(field) {
-					configuration[field.property] = document.getElementById(
+					configuration[field.property] = Template.instance().find('#' + 
 						'configure-login-service-dialog-' + field.property).value
 						.replace(/^\s*|\s*$/g, ""); // trim;
 				});
@@ -267,7 +267,7 @@
 	// Abstraction would make all of this reactive, and simpler.
 	var updateSaveDisabled = function() {
 		var anyFieldEmpty = _.any(configurationFields(), function(field) {
-			return document.getElementById(
+			return Template.instance().find('#' + 
 				'configure-login-service-dialog-' + field.property).value === '';
 		});
 
