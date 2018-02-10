@@ -8,7 +8,7 @@ Package.describe({
 Package.on_use(function (api) {
 	api.use(['session@1.0.0',
 		'spacebars@1.0.0',
-		'stylus@1.0.0 || 2.0.0',
+		'coagmano:stylus@1.0.3',
 		'accounts-base@1.0.0',
 		'underscore@1.0.0',
 		'templating@1.0.0',
