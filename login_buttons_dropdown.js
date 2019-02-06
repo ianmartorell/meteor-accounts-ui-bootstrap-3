@@ -12,7 +12,6 @@
 		'click #login-name-link, click #login-sign-in-link': function(event) {
 			event.stopPropagation();
 			loginButtonsSession.set('dropdownVisible', true);
-			Meteor.flush();
 		},
 		'click .login-close': function() {
 			loginButtonsSession.closeDropdown();
@@ -33,7 +32,6 @@
 			event.stopPropagation();
 			loginButtonsSession.resetMessages();
 			loginButtonsSession.set('inChangePasswordFlow', true);
-			Meteor.flush();
 		}
 	});
 
@@ -124,7 +122,7 @@
 				loginButtonsSession.set('inForgotPasswordFlow', false);
 
 				// force the ui to update so that we have the approprate fields to fill in
-				Meteor.flush();
+				Tracker.flush();
 
 				// update new fields with appropriate defaults
 				if (username !== null) {
@@ -152,7 +150,7 @@
 			loginButtonsSession.set('inForgotPasswordFlow', true);
 
 			// force the ui to update so that we have the approprate fields to fill in
-			Meteor.flush();
+			Tracker.flush();
 			//toggleDropdown();
 
 			// update new fields with appropriate defaults
@@ -175,7 +173,7 @@
 			loginButtonsSession.set('inForgotPasswordFlow', false);
 
 			// force the ui to update so that we have the approprate fields to fill in
-			Meteor.flush();
+			Tracker.flush();
 
 			if (document.getElementById('login-username')){
 				document.getElementById('login-username').value = username;
@@ -373,7 +371,7 @@
 			event.stopPropagation();
 			loginButtonsSession.resetMessages();
 			Accounts._loginButtonsSession.set('inChangePasswordFlow', false);
-			Meteor.flush();
+			Tracker.flush();
 		}
 	});
 
